@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/drizzle.png">
+    <link rel="stylesheet" href="main.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="weather">
+            <img class="weather-icon" src="assets/mist.png" alt="weather-icon">
+            <h1 class="temp">Welcome</h1>
+            <h2 class="location"></h2>
+            <div class="details">
+                <div class="col">
+                    <img src="assets/humidity.png" alt="humidity-icon">
+                    <div>
+                        <p>humidity</p>
+                        <p class="humidity">____</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="assets/wind.png" alt="wind-icon">
+                    <div>
+                        <p>wind</p>
+                        <p class="wind">____</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search">
+            <input
+                class="input"
+                id="inputBox"
+                type="text" 
+                placeholder="Location seach . . .">
+            <small class="error" id="errorMsg">error message</small>
+            <button class="search-btn" id="searchButton" title="seach">
+                <img src="assets/search.png" alt="seach-icon">
+            </button>
+            <button class="get-btn" id="getButton" title="Get Current Location">
+                <img src="assets/navigation.png" alt="seach-icon">
+            </button>
+        </div>
+    </div>
+    <footer>
+        Coded by <img src="assets/signature.png" alt="signature">
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
