@@ -53,9 +53,8 @@ searchBtn.addEventListener("click",()=>{
 const getCurrentBtn = document.getElementById('getButton');
 
 async function getCurrentWeather(lat,lon){   
-    fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${API_KEY}`)
-        .then(res => res.json())
-        .then(data => {
+    let res =await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${API_KEY}`)
+    let data = await res.json();
             console.log(data)
             document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + " °C";
             document.querySelector('.location').innerHTML = data.name;
@@ -81,7 +80,6 @@ async function getCurrentWeather(lat,lon){
             else if(data.weather[0].main == "Snow"){
                 iconWeather.src = "assets/snow.png"
             }
-        })
 }
 getCurrentBtn.addEventListener("click",()=>{
     navigator.geolocation.getCurrentPosition((position) => {
